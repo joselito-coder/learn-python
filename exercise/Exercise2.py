@@ -15,11 +15,11 @@ valid_operators = ['+','-','/','*']
 user_operator = input("Enter your operator:  Valid Options (+, -, /, *)\n>> ")
 
 # take user input and ask for their numbers
-user_num_1 = input("Enter First number\n>> ")
-user_num_2 = input("Enter second number\n>> ")
+user_num_1 = int(input("Enter First number\n>> "))
+user_num_2 = int(input("Enter second number\n>> "))
 
 # store the answers as string by joining the first num with the operator and second num
-answers_string = user_num_1 + user_operator + user_num_2
+answers_string = str(user_num_1) + user_operator + str(user_num_2)
 
 # Check if the user has entered a invalid operator
 if user_operator not in valid_operators:
