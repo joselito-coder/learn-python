@@ -27,6 +27,16 @@ if user_operator not in valid_operators:
 # check if the user wants the answers to the questions given in problem statement
 elif answers_string in wrong_answers_dict.keys():
     print(wrong_answers_dict.get(answers_string))
+# else print the correct answer 
 else:
-    # the eval function evaluates an expression which is in the form of string
-    print(eval(answers_string))
+    if user_operator == "*":
+        print(user_num_1 * user_num_2)
+    elif user_operator == "/":
+        print(user_num_1 / user_num_2)
+    elif user_operator == "+":
+        print(user_num_1 + user_num_2)
+    elif user_operator == "-":
+        print(user_num_1 - user_num_2)
+    else:
+        print("Some error occurred")
+    
