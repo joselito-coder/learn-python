@@ -1,8 +1,8 @@
-f = open("misc_files/Harry.txt",'rt')
+# f = open("misc_files/Harry.txt",'rt')
 # print(f.readline())
 # print(f.readline())
 # print(f.readline())
-print(f.readlines())
+# print(f.readlines())
 
 # content = f.read()
 # print(content)
@@ -15,4 +15,9 @@ print(f.readlines())
 # content  = f.read(344)
 # print("2",content)
 
-f.close()
+# f.close()
+
+jos = open('misc_files/Joselito.txt')
+
+for line in jos:
+    print(line)
