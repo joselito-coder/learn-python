@@ -1,0 +1,6 @@
+Hello I am writing to a file
+Hello I am appending to a file
+Hello I am appending another line to a file
+Hello I am writing this line in read and write mode
+Hello I am writing this line in read and write mode
+Hello I am writing this line in read and write mode
