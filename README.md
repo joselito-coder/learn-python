@@ -1,0 +1,2 @@
+Hey, I am going to learn python and practice here. I am following a tutorial series from the Channel CodeWithHarry.  
+The playlist link can be found [Here](https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME)
