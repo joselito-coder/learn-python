@@ -28,14 +28,33 @@ import random
 # to install pyperclip first type pip install pyperclip
 
 # importing pyperclip
-import pyperclip
+# import pyperclip
 
-# copying text to the clipboard
-text = "CodeWithHarry is the best channel"
-pyperclip.copy(text)
+# # copying text to the clipboard
+# text = "CodeWithHarry is the best channel"
+# pyperclip.copy(text)
 
-# We can Also get the contents of the clipboard and store it inside a variable
-clip_text = pyperclip.paste()
-# should print CodeWithHarry is the best channel
-print(clip_text)
+# # We can Also get the contents of the clipboard and store it inside a variable
+# clip_text = pyperclip.paste()
+# # should print CodeWithHarry is the best channel
+# print(clip_text)
 
+# testing other modules found from the comment section
+# import platform
+# print("processor is :", platform.processor())
+# print("architecture  is :", platform.architecture())
+# print("system is :", platform.system())
+# print("compiler is :", platform.python_compiler())
+
+# import pandas as pd
+# a=[87,90,43,21]
+# # a = ["hello",'this','is','mi']
+# a = {"hello":"World","Bye":"Worries","Tanks":"u"}
+
+# var=pd.Series(a)
+# print(var)
+# # print(type(var))
+
+import  numpy as ap
+a1=ap.arange(1,10)
+print(a1)
