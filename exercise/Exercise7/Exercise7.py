@@ -15,8 +15,8 @@ eyes = './eyes.mp3'
 water = './water.mp3'
 physical = './physical.mp3'
 
-eye_exercise_interval = 20
-drink_water_interval = 30
+eye_exercise_interval = 30
+drink_water_interval = 20
 physical_exercise_interval = 45
 
 water_to_drink = 3.5
