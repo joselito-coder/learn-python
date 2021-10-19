@@ -1,4 +1,4 @@
-class Student():
+class Student:
     pass
 
 harry = Student()
