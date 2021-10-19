@@ -25,9 +25,6 @@ def playAudio(filename):
     pygame.mixer.init()
     pygame.mixer.music.load(filename)
     pygame.mixer.music.play(-1)
-    # while pygame.mixer.music.get_busy(): 
-    #     pygame.time.Clock().tick(10)
-    # pygame.mixer.music.pause()
 
 def logEvent(event,filename):
     logFilename = f"{filename}_log.txt"
@@ -40,15 +37,12 @@ def logEvent(event,filename):
 def get_work_time():
     return datetime.datetime.now().strftime('%H:%M:%S')
 
-def reminder():
-    # t = datetime.datetime.now()
-    global t
+def reminder_water():
+    global t_water
     global water_to_drink
 
-    timeWaitWater = eye_exercise_interval  * 60
-    timeWaitEyes = drink_water_interval * 60
-    timeWaitExer = physical_exercise_interval * 50
-    delta = datetime.datetime.now() -t 
+    timeWaitWater = drink_water_interval  * 60
+    delta = datetime.datetime.now() -t_water
     user_input = ""
 
     if delta.seconds  == timeWaitWater and water_to_drink != 0 :
@@ -60,8 +54,15 @@ def reminder():
                 water_to_drink -= 0.25
                 break
         logEvent('Drank water', 'water')
+        t_water = datetime.datetime.now()
         
-    elif delta.seconds == timeWaitEyes:
+
+def remind_eyes():
+    global t_eyes
+    timeWaitEyes = eye_exercise_interval * 60
+    delta = datetime.datetime.now() -t_eyes 
+
+    if delta.seconds == timeWaitEyes:
         playAudio(eyes)
         while 1:
             user_input = input("Enter EyDone To stop alarm: ")
@@ -69,8 +70,14 @@ def reminder():
                 pygame.mixer.music.stop()
                 break
         logEvent('Eye Exercise done', 'eyes')
+        t_eyes = datetime.datetime.now()
+    
+def remind_physical_exercise():
+    global t_physical
+    timeWaitExer = physical_exercise_interval * 60
+    delta = datetime.datetime.now() - t_physical
 
-    elif delta.seconds == timeWaitExer:
+    if delta.seconds == timeWaitExer:
         playAudio(physical)
         while 1:
             user_input = input("Enter ExDone To stop alarm: ")
@@ -79,17 +86,21 @@ def reminder():
                 t = datetime.datetime.now()
                 break
         logEvent('Eye Exercise done', 'eyes')
-    
+        t_physical = datetime.datetime.now()
+
 
 work_time = get_work_time()
 
-t = datetime.datetime.now()
+t_water = datetime.datetime.now()
+t_physical = datetime.datetime.now()
+t_eyes = datetime.datetime.now()
 
 while work_time > '09:00:00' and  work_time < '17:00:00' :
 
-    reminder()
+    reminder_water()
+    remind_eyes()
+    remind_physical_exercise()
 
-    # t = datetime.datetime.now()
     work_time = get_work_time()
 
 
