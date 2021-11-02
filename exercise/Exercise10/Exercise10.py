@@ -14,7 +14,7 @@ if __name__ == "__main__":
         # Store the data as list of list
         # using list comprehension and strip the newline character
         # Also ignore the empty lists
-        data_list = [[d.rstrip()] for d in lines if d.rstrip() != "" ]
+        data_list = [d.rstrip().split(',') for d in lines if d.rstrip() != "" ]
 
     # Pickle the list of lists
     with open('data.pkl','wb') as p_data:
