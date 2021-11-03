@@ -1,0 +1,3 @@
+This is a python package which has the Dio class, if the name argument is  not given while creating the class it will assume that you are Dio
+Dio class has a method named watch_video() which allows you to watch a dio video, currently this video url is hard coded, and it opens in your default browser
+The other method that the Dio class has is the print_name() method, all it does is prints "kono <name> da" . if called the constructor without arguments it will default to name Dio
