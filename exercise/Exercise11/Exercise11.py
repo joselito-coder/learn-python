@@ -6,12 +6,15 @@ rice.dangelo@carter.com
 emely58@durgan.com arlie61@gmail.com some random jibberish
 estrella.kris@reilly.com
 This site is offered as is to those who visit it. We make no guarantees regarding its services. Just enjoy yourself.
+
+babu@babu.ac.in
+
 pp##pupu@bmail.com
 hahahahahahahahahahahah some random jibberish that you won't understand asd;lkfjas; dlfkj;asldkj;laksjdf;lkajsdfl;kja;sdlfkja;sldfjka;lsdkfj;laskdfjal;ksdjf;laksdf
 """
 
 # regex for extracting emails
-email_regex = re.compile(r'[A-Za-z.0-9_-]+@[A-Za-z.0-9]+\.[A-Za-z.0-9]{2,8}')
+email_regex = re.compile(r'[A-Za-z.0-9_-]+@[A-Za-z.0-9]+\.[A-Za-z.0-9]+')
 
 # store the email matches
 email_matches  = email_regex.findall(string)
