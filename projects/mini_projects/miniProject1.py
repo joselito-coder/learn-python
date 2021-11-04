@@ -83,10 +83,10 @@ def main():
         elif user_input == 2:
             username = input("Enter username :  ")
             book_name = input("Enter book name: ")
-            HarryLibrary.lendBook(book_name)
+            HarryLibrary.lendBook(book_name,username)
         elif user_input == 3:
             bookname = input("Enter book name: ")
-            HarryLibrary.addBook(bookname, uesrname)
+            HarryLibrary.addBook(bookname)
         elif user_input == 4:
             bookname = input("Enter book name: ")
             HarryLibrary.returnBook(bookname)
@@ -99,7 +99,7 @@ def main():
         print("Please Try again\n")
         main()
 
-
-print(f"Welcome to {HarryLibrary.name} Library ")
-while 1:
-    main()
+if __name__ =="__main__":
+    print(f"Welcome to {HarryLibrary.name} Library ")
+    while 1:
+        main()
