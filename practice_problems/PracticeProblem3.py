@@ -19,11 +19,12 @@
 def inbuilt_reverse_list(user_list):
     # create a copy of the user list
     list_copy = user_list.copy()
+    # Reverse using inbuilt methods
     list_copy.reverse()
     return  list_copy
 
 def slice_reverse_list(user_list):
-    # Return the reverse slice
+    # Return the reverse slice of the list
     return user_list[::-1]
 
 def swap_reverse_list(user_list):
