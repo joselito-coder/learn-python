@@ -13,14 +13,17 @@
 # 5 is a divisor of 20
 
 # Solution
+try:
+    # Take number of n
+    n = int(input("Please enter the number of apple Harry has\n>> "))
 
-# Take number of n
-n = int(input("Please enter the number of apple Harry has\n>> "))
-
-# Take range input
-print("Enter a range (minimum maximum) ")
-mn = int(input("Min >> "))
-mx = int(input("Max >> "))
+    # Take range input
+    print("Enter a range (minimum maximum) ")
+    mn = int(input("Min >> "))
+    mx = int(input("Max >> "))
+except ValueError:
+    print("Invalid Input")
+    exit()
 
 # Error checking if mn == mx
 if mn == mx:
@@ -29,7 +32,7 @@ if mn == mx:
 
 # For loop to determine if a number is divisor of n
 for num in range(mn,mx+1):
-    if n % num == 0:
+    if num % n == 0:
         print(f"{num} is a divisor of {n}")
     else:
         print(f"{num} is not a divisor of {n}")
