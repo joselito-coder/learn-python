@@ -1,3 +1,10 @@
+'''
+Author: Joselito
+Date: 8-11-2021
+Purpose: For practicing programming
+'''
+
+
 # Problem Statement:-
 # A palindrome is a string that, when reversed, is equal to itself. Example of the palindrome includes:
 
@@ -31,6 +38,8 @@ def isNumPalindrome(num):
 
 # This Function is used to get the next palindrome of a number
 def nextPalindrome(num):
+    # IN case the number passed to this function is a palindrome
+    num += 1
     # while the number is not a palindrome keep adding 1 to it until it becomes a palindrome
     while not isNumPalindrome(num) :
         num += 1
