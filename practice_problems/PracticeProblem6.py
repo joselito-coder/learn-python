@@ -37,7 +37,7 @@ class Player():
             user_number = int(input())
         
         self.has_completed = True
-        print(f"Correct You took {self.number_of_tries} Trials to guess the number\n")
+        print(f"\nCorrect You took {self.number_of_tries} Trials to guess the number\n")
 
             
 if __name__ == "__main__":  
@@ -56,11 +56,14 @@ if __name__ == "__main__":
 
     # Guess a number between a and b
     rndly_guessed_num = random.randint(a, b)
-
+    
     print(f"Please guess a Number between {a} and {b}")
+
     # Create player instances and play the game
     player1 = Player("player1",rndly_guessed_num)
-    player2 = Player("player2",rndly_guessed_num)
+
+    rndly_guessed_num_p2 = random.randint(a, b) 
+    player2 = Player("player2",rndly_guessed_num_p2)
 
     player1.playGame()
     player2.playGame()
@@ -72,3 +75,6 @@ if __name__ == "__main__":
             print(f"{player1.name.capitalize()} Wins!!")
         else:
             print("It's a draw")
+    
+    print(f"\nThe number for player 1 was {rndly_guessed_num}")
+    print(f"The number for player 2 was {rndly_guessed_num_p2}")
