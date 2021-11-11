@@ -55,8 +55,7 @@ if __name__ == "__main__":
         exit()
 
     # Guess a number between a and b
-    # rndly_guessed_num = random.randint(a, b)
-    rndly_guessed_num = 6
+    rndly_guessed_num = random.randint(a, b)
 
     print(f"Please guess a Number between {a} and {b}")
     # Create player instances and play the game
