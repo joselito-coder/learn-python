@@ -25,12 +25,12 @@ def searchWord(sentences,query_string):
     # Loop through the sentences and 
     for sentence in sentences:
         # check if the query string is in that sentence
-        if query_string in sentence:
+        if query_string.lower() in sentence.lower():
             # loop through the sentence and 
             # Check for the occurance of that query_string in that sentence
             # increment every time the word is found
             for word in sentence.split():
-                if query_string in word:
+                if query_string.lower() in word.lower():
                     relevance[sentence] += 1
         # If the query is not found in sentence then remove it from the relevance dict
         else:
