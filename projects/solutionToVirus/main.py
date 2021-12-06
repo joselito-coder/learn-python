@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,request
 from flask import render_template
 import pickle
 
@@ -8,14 +8,25 @@ with open('model.pkl','rb') as model:
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/",methods=['post','get'])
 def hello_world():
+    if request.method == "POST":
+        print(request.form)
+        values  = request.form
 
-    # Code for inference
-    input_feature = [[110,1,22,1,1]]
-    infProb = clf.predict_proba(input_feature)[0][1]
+        fever = int(values['fever'])
+        age = int(values['age'])
+        pain = int(values['pain'])
+        runnyNose = int(values['runnyNose'])
+        diffBreath = int(values['diffBreath'])
 
-    # return "<p>Hello, World!</p> "+ str(infProb)
+        # Code for inference
+        input_feature = [[fever,pain,age,runnyNose,diffBreath]]
+        infProb = clf.predict_proba(input_feature)[0][1]
+        print(infProb)
+        infProb = round(infProb* 100) 
+        return render_template('show.html',inf=infProb)
+
     return render_template('index.html')
 
 
